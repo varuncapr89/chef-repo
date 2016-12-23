@@ -6,9 +6,10 @@
 package 'httpd' do
 end
 service 'httpd' do 
-	action [:enable, :start]
+	action [:start, :enable]
 end
-file '/var/html/www/varun.txt' do
+file '/var/www/index.html' do
+	action :create
 	content 'Welcome to varun\'s page'
 end
 
